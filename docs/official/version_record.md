@@ -8,7 +8,7 @@ sidebarDepth: 0
  * @Author: 【B站&公众号】Rong姐姐好可爱
  * @Date: 2021-01-17 10:32:39
  * @LastEditors: 【B站&公众号】Rong姐姐好可爱
- * @LastEditTime: 2021-01-17 14:03:10
+ * @LastEditTime: 2021-02-14 22:37:15
 -->
 
 
@@ -17,9 +17,10 @@ sidebarDepth: 0
 
 ## 基本说明
 
-- 绿色表示已完成、成功状态。
-- 红色表示告警、错误状态。
-- 蓝色表示正在进行、默认状态。
+- <a-tag color="green">优化</a-tag>表示优化、已完成、可正式使用状态。
+- <a-tag color="purple">紫色</a-tag>表示修复、可测试状态。
+- <a-tag color="red">红色</a-tag>红色表示出现异常、告警、错误状态。
+- <a-tag color="orange">橙色</a-tag>表示新增、正在进行、默认状态。
 
 
 ## 版本记录

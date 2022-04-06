@@ -4,7 +4,7 @@
  * @Author: 【B站&公众号】Rong姐姐好可爱
  * @Date: 2021-01-10 19:04:21
  * @LastEditors: 【B站&公众号】Rong姐姐好可爱
- * @LastEditTime: 2021-01-19 22:46:21
+ * @LastEditTime: 2022-03-31 07:45:04
  */
 module.exports = {
   theme:"antdocs",
@@ -35,10 +35,10 @@ module.exports = {
     displayAllHeaders: false, // 默认值：false
     searchMaxSuggestions: 10,// 搜索框显示的搜索结果数量
     ads:{
-      style: 1, 
+      style: 2, 
       // speed: 2000,
       image: '/assets/gzh.png',
-      text: 'Rong姐姐好可爱：来公众号交个朋友吧~',
+      text: '来公众号交个朋友吧~',
       link: 'https://space.bilibili.com/350937042',
 
     }

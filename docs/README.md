@@ -61,7 +61,7 @@ footerWrap:
     details: 日常更新
   - title: 哔哩哔哩
     link: https://space.bilibili.com/350937042
-    # details: 间歇性更新
+    details: 不定期更新
 footer: MIT Licensed |  <a href="https://github.com/mmdapl" target="_blank">Rong姐姐好可爱</a> | Copyright © 2018-2022 All Rights Reserved  <a href="https://tongji.baidu.com/web/welcome/login" target="_blank">百度统计</a>
 ---
 
