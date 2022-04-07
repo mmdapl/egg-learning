@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>快速入门 | 薛定谔的Egg.js</title>
+    <meta name="description" content="">
+    <meta name="generator" content="VuePress 1.8.0">
+    <link rel="icon" href="/egg-learning/assets/egg_learning_logo.png">
+    <meta name="description" content="官方文档出发、结合使用体验，不一样的笔记文档">
+    <meta name="author" content="Rong姐姐好可爱,Bilibili、Github、公众号都是这样啦">
+    <meta name="google" content="notranslate">
+    <meta name="keywords" content="Rong姐姐好可爱">
+    <link rel="preload" href="/egg-learning/assets/css/0.styles.60aff8c3.css" as="style"><link rel="preload" href="/egg-learning/assets/js/app.832bcef2.js" as="script"><link rel="preload" href="/egg-learning/assets/js/2.37616b7d.js" as="script"><link rel="preload" href="/egg-learning/assets/js/14.211de7bf.js" as="script"><link rel="prefetch" href="/egg-learning/assets/js/10.5e615cbe.js"><link rel="prefetch" href="/egg-learning/assets/js/11.9bf31c6c.js"><link rel="prefetch" href="/egg-learning/assets/js/12.7ac13721.js"><link rel="prefetch" href="/egg-learning/assets/js/13.ed54cc91.js"><link rel="prefetch" href="/egg-learning/assets/js/15.59cbab71.js"><link rel="prefetch" href="/egg-learning/assets/js/16.a98989fb.js"><link rel="prefetch" href="/egg-learning/assets/js/17.e180ff8a.js"><link rel="prefetch" href="/egg-learning/assets/js/18.57eafdc5.js"><link rel="prefetch" href="/egg-learning/assets/js/19.1f9b8c6b.js"><link rel="prefetch" href="/egg-learning/assets/js/20.92d0ca54.js"><link rel="prefetch" href="/egg-learning/assets/js/21.a904c12f.js"><link rel="prefetch" href="/egg-learning/assets/js/22.79ac6ee2.js"><link rel="prefetch" href="/egg-learning/assets/js/23.198d3f8b.js"><link rel="prefetch" href="/egg-learning/assets/js/24.204b7af2.js"><link rel="prefetch" href="/egg-learning/assets/js/25.7ee29836.js"><link rel="prefetch" href="/egg-learning/assets/js/3.c2034b81.js"><link rel="prefetch" href="/egg-learning/assets/js/4.5df22fa4.js"><link rel="prefetch" href="/egg-learning/assets/js/5.fdb6cfce.js"><link rel="prefetch" href="/egg-learning/assets/js/6.9f2e4ded.js"><link rel="prefetch" href="/egg-learning/assets/js/7.62f90180.js"><link rel="prefetch" href="/egg-learning/assets/js/8.72441dce.js"><link rel="prefetch" href="/egg-learning/assets/js/9.58d4e40f.js">
+    <link rel="stylesheet" href="/egg-learning/assets/css/0.styles.60aff8c3.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="ant-row"><div class="sidebar-button"><i aria-label="icon: bars" class="anticon anticon-bars"><svg viewBox="0 0 1024 1024" focusable="false" data-icon="bars" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M912 192H328c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h584c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 284H328c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h584c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 284H328c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h584c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM104 228a56 56 0 1 0 112 0 56 56 0 1 0-112 0zm0 284a56 56 0 1 0 112 0 56 56 0 1 0-112 0zm0 284a56 56 0 1 0 112 0 56 56 0 1 0-112 0z"></path></svg></i> <span></span></div> <div class="ant-col ant-col-xs-24 ant-col-sm-24 ant-col-md-6 ant-col-lg-5 ant-col-xl-5 ant-col-xxl-4"><a href="/egg-learning/" class="router-link-active no-logo home-link"><!----> <span class="site-name">薛定谔的Egg.js</span></a> <div class="search-box mobile-search"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div></div> <div class="ant-col ant-col-xs-0 ant-col-sm-0 ant-col-md-18 ant-col-lg-19 ant-col-xl-19 ant-col-xxl-20"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><ul role="menu" id="nav" class="ant-menu ant-menu-horizontal ant-menu-root ant-menu-light"><li role="menuitem" class="ant-menu-submenu ant-menu-submenu-horizontal ant-menu-overflowed-submenu" style="display:none;"><div aria-haspopup="true" class="ant-menu-submenu-title"><span>···</span><i class="ant-menu-submenu-arrow"></i></div></li><li role="menuitem" class="ant-menu-item ant-menu-item-selected"><a href="/egg-learning/official/" class="router-link-active">
+          基础
+        </a></li><li role="menuitem" class="ant-menu-submenu ant-menu-submenu-horizontal ant-menu-overflowed-submenu" style="display:none;"><div aria-haspopup="true" class="ant-menu-submenu-title"><span>···</span><i class="ant-menu-submenu-arrow"></i></div></li><li role="menuitem" class="ant-menu-item"><a href="/egg-learning/egg-core/">
+          进阶
+        </a></li><li role="menuitem" class="ant-menu-submenu ant-menu-submenu-horizontal ant-menu-overflowed-submenu" style="display:none;"><div aria-haspopup="true" class="ant-menu-submenu-title"><span>···</span><i class="ant-menu-submenu-arrow"></i></div></li><li role="menuitem" class="ant-menu-item"><a href="/egg-learning/egg-plugin/">
+          插件应用
+        </a></li><li role="menuitem" class="ant-menu-submenu ant-menu-submenu-horizontal ant-menu-overflowed-submenu" style="display:none;"><div aria-haspopup="true" class="ant-menu-submenu-title"><span>···</span><i class="ant-menu-submenu-arrow"></i></div></li><li role="menuitem" class="ant-menu-item"><a href="/egg-learning/practice/">
+          最佳实践
+        </a></li><li role="menuitem" class="ant-menu-submenu ant-menu-submenu-horizontal ant-menu-overflowed-submenu" style="display:none;"><div aria-haspopup="true" class="ant-menu-submenu-title"><span>···</span><i class="ant-menu-submenu-arrow"></i></div></li><li role="menuitem" class="ant-menu-submenu ant-menu-submenu-horizontal"><div aria-haspopup="true" class="ant-menu-submenu-title"><span>
+          开源插件
+        </span><i class="ant-menu-submenu-arrow"></i></div></li><li role="menuitem" class="ant-menu-submenu ant-menu-submenu-horizontal ant-menu-overflowed-submenu" style="display:none;"><div aria-haspopup="true" class="ant-menu-submenu-title"><span>···</span><i class="ant-menu-submenu-arrow"></i></div></li><li role="menuitem" class="ant-menu-submenu ant-menu-submenu-horizontal"><div aria-haspopup="true" class="ant-menu-submenu-title"><span>
+          我的项目
+        </span><i class="ant-menu-submenu-arrow"></i></div></li><li role="menuitem" class="ant-menu-submenu ant-menu-submenu-horizontal ant-menu-overflowed-submenu" style="visibility:hidden;position:absolute;"><div aria-haspopup="true" class="ant-menu-submenu-title"><span>···</span><i class="ant-menu-submenu-arrow"></i></div></li></ul> <a href="https://github.com/mmdapl" target="_blank" rel="noopener noreferrer" class="repo-link"><i aria-label="icon: github" class="anticon anticon-github"><svg viewBox="64 64 896 896" focusable="false" data-icon="github" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M511.6 76.3C264.3 76.2 64 276.4 64 523.5 64 718.9 189.3 885 363.8 946c23.5 5.9 19.9-10.8 19.9-22.2v-77.5c-135.7 15.9-141.2-73.9-150.3-88.9C215 726 171.5 718 184.5 703c30.9-15.9 62.4 4 98.9 57.9 26.4 39.1 77.9 32.5 104 26 5.7-23.5 17.9-44.5 34.7-60.8-140.6-25.2-199.2-111-199.2-213 0-49.5 16.3-95 48.3-131.7-20.4-60.5 1.9-112.3 4.9-120 58.1-5.2 118.5 41.6 123.2 45.3 33-8.9 70.7-13.6 112.9-13.6 42.4 0 80.2 4.9 113.5 13.9 11.3-8.6 67.3-48.8 121.3-43.9 2.9 7.7 24.7 58.3 5.5 118 32.4 36.8 48.9 82.7 48.9 132.3 0 102.2-59 188.1-200 212.9a127.5 127.5 0 0 1 38.1 91v112.5c.8 9 0 17.9 15 17.9 177.1-59.7 304.6-227 304.6-424.1 0-247.2-200.4-447.3-447.5-447.3z"></path></svg></i></a></nav></div></div> <!----></header> <aside class="sidebar"><div><div class="ads"><div id="ads_2"><div class="ant-carousel"><div class="slick-slider slick-initialized"><div class="slick-list"><div class="slick-track"></div></div></div></div></div></div> <div role="separator" id="reset-margin" class="ant-divider ant-divider-horizontal ant-divider-dashed"></div></div> <ul class="sidebar-links"><li><a href="/egg-learning/official/" aria-current="page" title="开始阅读" class="sidebar-link">开始阅读</a></li><li><a href="/egg-learning/official/version_record.html" title="更新日志" class="sidebar-link">更新日志</a></li><li><a href="/egg-learning/official/introduce.html" title="简单介绍" class="sidebar-link">简单介绍</a></li><li><a href="/egg-learning/official/quick_start.html" aria-current="page" title="快速入门" class="active sidebar-link">快速入门</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/egg-learning/official/quick_start.html#基础环境" title="基础环境" class="sidebar-link">基础环境</a></li><li class="sidebar-sub-header"><a href="/egg-learning/official/quick_start.html#环境检测" title="环境检测" class="sidebar-link">环境检测</a></li><li class="sidebar-sub-header"><a href="/egg-learning/official/quick_start.html#快速搭建" title="快速搭建" class="sidebar-link">快速搭建</a></li><li class="sidebar-sub-header"><a href="/egg-learning/official/quick_start.html#手动搭建" title="手动搭建" class="sidebar-link">手动搭建</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/egg-learning/official/quick_start.html#项目初始化" title="项目初始化" class="sidebar-link">项目初始化</a></li><li class="sidebar-sub-header"><a href="/egg-learning/official/quick_start.html#编写控制器" title="编写控制器" class="sidebar-link">编写控制器</a></li><li class="sidebar-sub-header"><a href="/egg-learning/official/quick_start.html#配置路由" title="配置路由" class="sidebar-link">配置路由</a></li><li class="sidebar-sub-header"><a href="/egg-learning/official/quick_start.html#启动项目" title="启动项目" class="sidebar-link">启动项目</a></li><li class="sidebar-sub-header"><a href="/egg-learning/official/quick_start.html#初次体验" title="初次体验" class="sidebar-link">初次体验</a></li><li class="sidebar-sub-header"><a href="/egg-learning/official/quick_start.html#静态资源" title="静态资源" class="sidebar-link">静态资源</a></li></ul></li><li class="sidebar-sub-header"><a href="/egg-learning/official/quick_start.html#模板渲染" title="模板渲染" class="sidebar-link">模板渲染</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/egg-learning/official/quick_start.html#编写-service" title="编写 service" class="sidebar-link">编写 service</a></li><li class="sidebar-sub-header"><a href="/egg-learning/official/quick_start.html#编写扩展" title="编写扩展" class="sidebar-link">编写扩展</a></li></ul></li><li class="sidebar-sub-header"><a href="/egg-learning/official/quick_start.html#编写-middleware" title="编写 Middleware" class="sidebar-link">编写 Middleware</a></li><li class="sidebar-sub-header"><a href="/egg-learning/official/quick_start.html#配置文件" title="配置文件" class="sidebar-link">配置文件</a></li><li class="sidebar-sub-header"><a href="/egg-learning/official/quick_start.html#单元测试" title="单元测试" class="sidebar-link">单元测试</a></li></ul></li><li><a href="/egg-learning/official/catalog.html" title="目录结构" class="sidebar-link">目录结构</a></li><li><a href="/egg-learning/official/frame_object.html" title="内置对象" class="sidebar-link">内置对象</a></li><li><a href="/egg-learning/official/running_env.html" title="运行环境（Env）" class="sidebar-link">运行环境（Env）</a></li><li><a href="/egg-learning/official/middleware.html" title="中间件（Middleware）" class="sidebar-link">中间件（Middleware）</a></li><li><a href="/egg-learning/official/router.html" title="路由（Router）" class="sidebar-link">路由（Router）</a></li><li><a href="/egg-learning/official/controller.html" title="控制器（Controller）" class="sidebar-link">控制器（Controller）</a></li><li><a href="/egg-learning/official/service.html" title="服务（Service）" class="sidebar-link">服务（Service）</a></li><li><a href="/egg-learning/official/schedule.html" title="定时任务（Schedule）" class="sidebar-link">定时任务（Schedule）</a></li><li><a href="/egg-learning/official/frame_extend.html" title="框架扩展（Extend）" class="sidebar-link">框架扩展（Extend）</a></li></ul></aside> <main class="page"> <div class="theme-antdocs-content content__default"><h1 id="快速入门"><a href="#快速入门" class="header-anchor">#</a> 快速入门</h1> <p>手把手快速从0到1搭建一个基础的Egg.js应用</p> <h2 id="基础环境"><a href="#基础环境" class="header-anchor">#</a> 基础环境</h2> <ul><li>操作系统：macOS、Linux、Windows均可</li> <li>Nodejs环境</li></ul> <h2 id="环境检测"><a href="#环境检测" class="header-anchor">#</a> 环境检测</h2> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token comment">## 查看npm版本</span>
+<span class="token function">npm</span> version
+
+</code></pre></div><h2 id="快速搭建"><a href="#快速搭建" class="header-anchor">#</a> 快速搭建</h2> <div class="language-bash extra-class"><pre class="language-bash"><code>
+<span class="token comment">## 创建根目录，并切换进入</span>
+<span class="token function">mkdir</span> egg-demo <span class="token operator">&amp;&amp;</span> <span class="token builtin class-name">cd</span> egg-demo
+
+<span class="token comment">## 项目初始化</span>
+<span class="token function">npm</span> init egg --type<span class="token operator">=</span>simple
+
+<span class="token comment">## 下载依赖</span>
+<span class="token function">npm</span> i
+
+<span class="token comment">## 开发环境下启动</span>
+<span class="token function">npm</span> run dev
+
+<span class="token comment">## 浏览器访问</span>
+http://localhost:7001
+
+</code></pre></div><h2 id="手动搭建"><a href="#手动搭建" class="header-anchor">#</a> 手动搭建</h2> <h3 id="项目初始化"><a href="#项目初始化" class="header-anchor">#</a> 项目初始化</h3> <p>和基础的node项目一样，先初始化目录结构</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token comment">## 创建目录</span>
+<span class="token function">mkdir</span> egg-demo
+
+<span class="token comment">## 切换进入</span>
+
+<span class="token builtin class-name">cd</span> egg-demo
+
+<span class="token comment">## node项目初始化</span>
+
+<span class="token function">npm</span> init
+
+<span class="token comment">## 下载egg依赖包</span>
+
+<span class="token function">npm</span> <span class="token function">install</span> egg --save
+
+<span class="token comment">## 开发环境下，安装启动依赖包</span>
+
+<span class="token function">npm</span> <span class="token function">install</span> egg-bin --save-dev
+
+</code></pre></div><p>由于在开发环境下启动，运行了<code>npm run dev</code>指令，所以需要在根目录下的package.json文件中配置dev命令脚本</p> <div class="language-json extra-class"><pre class="language-json"><code><span class="token punctuation">{</span>
+    <span class="token property">&quot;name&quot;</span><span class="token operator">:</span><span class="token string">&quot;egg-demo&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;scripts&quot;</span><span class="token operator">:</span><span class="token punctuation">{</span>
+        <span class="token property">&quot;dev&quot;</span><span class="token operator">:</span><span class="token string">&quot;egg-bin dev&quot;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+</code></pre></div><p>其实上面的配置，在通过快速搭建egg基础项目时，可以看到类似的配置</p> <h3 id="编写控制器"><a href="#编写控制器" class="header-anchor">#</a> 编写控制器</h3> <p>当你有了解过Web开发或者MVC的开发模式，在项目结构中肯定会有Controller层和Router路由层，当然Spring框架的路由注解会代替Router</p> <div class="language-js extra-class"><pre class="language-js"><code>
+<span class="token comment">// app/controller/home.js</span>
+
+<span class="token keyword">const</span> Controller<span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'egg'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>Controller<span class="token punctuation">;</span>
+
+<span class="token comment">// 定义类</span>
+
+<span class="token keyword">class</span> <span class="token class-name">HomeController</span> <span class="token keyword">extends</span> <span class="token class-name">Controller</span><span class="token punctuation">{</span>
+    <span class="token comment">// 定义方法</span>
+    <span class="token keyword">async</span> <span class="token function">index</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">const</span> <span class="token punctuation">{</span>ctx<span class="token punctuation">}</span><span class="token operator">=</span><span class="token keyword">this</span><span class="token punctuation">;</span>
+        ctx<span class="token punctuation">.</span>body<span class="token operator">=</span><span class="token string">'hi egg demo'</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+
+<span class="token comment">// 模块导出</span>
+
+module<span class="token punctuation">.</span>export<span class="token operator">=</span>HomeController
+
+</code></pre></div><h3 id="配置路由"><a href="#配置路由" class="header-anchor">#</a> 配置路由</h3> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">// app/router.js</span>
+module<span class="token punctuation">.</span><span class="token function-variable function">exports</span> <span class="token operator">=</span> <span class="token parameter">app</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> <span class="token punctuation">{</span> router<span class="token punctuation">,</span> controller <span class="token punctuation">}</span> <span class="token operator">=</span> app<span class="token punctuation">;</span>
+  router<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token string">'/'</span><span class="token punctuation">,</span> controller<span class="token punctuation">.</span>home<span class="token punctuation">.</span>index<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre></div><p>这个时候回头看，项目的基本结构：</p> <div class="language-bash extra-class"><pre class="language-bash"><code>egg-demo
+├── app
+│   ├── controller
+│   │   └── home.js
+│   └── router.js
+├── config
+│   └── config.default.js
+└── package.json
+
+</code></pre></div><h3 id="启动项目"><a href="#启动项目" class="header-anchor">#</a> 启动项目</h3> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token comment">## 开发环境下启动</span>
+<span class="token function">npm</span> run dev
+
+</code></pre></div><h3 id="初次体验"><a href="#初次体验" class="header-anchor">#</a> 初次体验</h3> <p>当执行<code>npm run dev</code>指令后，在console控制台可以看到相关的启动日志，我们可以通过访问http://localhost:7001来查看egg-demo是都正常启动</p> <h3 id="静态资源"><a href="#静态资源" class="header-anchor">#</a> 静态资源</h3> <p>Egg 内置了 static 插件，线上环境建议部署到 CDN，无需该插件。</p> <p>static 插件默认映射 <code>/public/ -&gt; app/public/</code> 目录</p> <p>此处，我们把静态资源都放到 <code>app/public</code> 目录即可：</p> <div class="language-bash extra-class"><pre class="language-bash"><code>
+app/public
+├── css
+│   └── news.css
+└── js
+    ├── lib.js
+    └── news.js
+</code></pre></div><h2 id="模板渲染"><a href="#模板渲染" class="header-anchor">#</a> 模板渲染</h2> <p>绝大多数情况，需要读取数据后渲染模板，然后呈现给用户。故我们需要引入对应的模板引擎。</p> <p>框架并不强制你使用某种模板引擎，只是约定了 View 插件开发规范，开发者可以引入不同的插件来实现差异化定制。</p> <p>在本例中，我们使用 Nunjucks 来渲染，先安装对应的插件 <code>egg-view-nunjucks</code> ：</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token comment">## 安装模块</span>
+$ <span class="token function">npm</span> i egg-view-nunjucks --save
+</code></pre></div><p>模块安装完成后，需要修改插件的参数配置来开启插件</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code>
+<span class="token comment">// config/plugin.js 注意：是 config 目录，不是 app/config!</span>
+exports<span class="token punctuation">.</span>nunjucks <span class="token operator">=</span> <span class="token punctuation">{</span>
+  enable<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+  <span class="token keyword">package</span><span class="token operator">:</span> <span class="token string">'egg-view-nunjucks'</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token comment">// config/config.default.js</span>
+exports<span class="token punctuation">.</span>keys <span class="token operator">=</span> <span class="token string">'&lt;此处改为你自己的 Cookie 安全字符串,建议hash值&gt;'</span><span class="token punctuation">;</span>
+<span class="token comment">// 添加 view 配置</span>
+exports<span class="token punctuation">.</span>view <span class="token operator">=</span> <span class="token punctuation">{</span>
+  defaultViewEngine<span class="token operator">:</span> <span class="token string">'nunjucks'</span><span class="token punctuation">,</span>
+  mapping<span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token string">'.tpl'</span><span class="token operator">:</span> <span class="token string">'nunjucks'</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre></div><p>为列表页编写模板文件，<strong>一般放置在 app/view 目录下</strong></p> <div class="language-html extra-class"><pre class="language-html"><code><span class="token comment">&lt;!-- app/view/news/list.tpl --&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">&gt;</span></span>Hacker News<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>stylesheet<span class="token punctuation">&quot;</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>/public/css/news.css<span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>news-view view<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+      {% for item in list %}
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>item<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>{{ item.url }}<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>{{ item.title }}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+      {% endfor %}
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ul</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><p>添加Controller层的页面访问逻辑</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">// app/controller/news.js</span>
+<span class="token keyword">const</span> Controller <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'egg'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>Controller<span class="token punctuation">;</span>
+
+<span class="token keyword">class</span> <span class="token class-name">NewsController</span> <span class="token keyword">extends</span> <span class="token class-name">Controller</span> <span class="token punctuation">{</span>
+  <span class="token keyword">async</span> <span class="token function">list</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> dataList <span class="token operator">=</span> <span class="token punctuation">{</span>
+      list<span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token punctuation">{</span> id<span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span> title<span class="token operator">:</span> <span class="token string">'this is news 1'</span><span class="token punctuation">,</span> url<span class="token operator">:</span> <span class="token string">'/news/1'</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span> id<span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span> title<span class="token operator">:</span> <span class="token string">'this is news 2'</span><span class="token punctuation">,</span> url<span class="token operator">:</span> <span class="token string">'/news/2'</span> <span class="token punctuation">}</span>
+      <span class="token punctuation">]</span>
+    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+    <span class="token keyword">await</span> <span class="token keyword">this</span><span class="token punctuation">.</span>ctx<span class="token punctuation">.</span><span class="token function">render</span><span class="token punctuation">(</span><span class="token string">'news/list.tpl'</span><span class="token punctuation">,</span> dataList<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> NewsController<span class="token punctuation">;</span>
+</code></pre></div><p>添加Router层中，路由的相关配置</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">// app/router.js</span>
+module<span class="token punctuation">.</span><span class="token function-variable function">exports</span> <span class="token operator">=</span> <span class="token parameter">app</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> <span class="token punctuation">{</span> router<span class="token punctuation">,</span> controller <span class="token punctuation">}</span> <span class="token operator">=</span> app<span class="token punctuation">;</span>
+  router<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token string">'/'</span><span class="token punctuation">,</span> controller<span class="token punctuation">.</span>home<span class="token punctuation">.</span>index<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  router<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token string">'/news'</span><span class="token punctuation">,</span> controller<span class="token punctuation">.</span>news<span class="token punctuation">.</span>list<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre></div><p>启动浏览器，访问 http://localhost:7001/news 即可看到渲染后的页面。</p> <p><strong>开发期默认开启了 development 插件，修改后端代码后，会自动重启 Worker 进程，即：热加载</strong></p> <h3 id="编写-service"><a href="#编写-service" class="header-anchor">#</a> 编写 service</h3> <p><strong>在实际应用中，Controller 一般不会自己产出数据，也不会包含复杂的逻辑，复杂的过程应抽象为业务逻辑层 Service。</strong></p> <p>添加一个 Service 抓取 Hacker News 的数据 ，如下：</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code>
+<span class="token comment">// app/service/news.js</span>
+<span class="token keyword">const</span> Service <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'egg'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>Service<span class="token punctuation">;</span>
+<span class="token keyword">class</span> <span class="token class-name">NewsService</span> <span class="token keyword">extends</span> <span class="token class-name">Service</span> <span class="token punctuation">{</span>
+  <span class="token keyword">async</span> <span class="token function">list</span><span class="token punctuation">(</span><span class="token parameter">page <span class="token operator">=</span> <span class="token number">1</span></span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// read config</span>
+    <span class="token keyword">const</span> <span class="token punctuation">{</span> serverUrl<span class="token punctuation">,</span> pageSize <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>config<span class="token punctuation">.</span>news<span class="token punctuation">;</span>
+
+    <span class="token comment">// use build-in http client to GET hacker-news api</span>
+    <span class="token keyword">const</span> <span class="token punctuation">{</span> data<span class="token operator">:</span> idList <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token keyword">this</span><span class="token punctuation">.</span>ctx<span class="token punctuation">.</span><span class="token function">curl</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>serverUrl<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">/topstories.json</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+      data<span class="token operator">:</span> <span class="token punctuation">{</span>
+        orderBy<span class="token operator">:</span> <span class="token string">'&quot;$key&quot;'</span><span class="token punctuation">,</span>
+        startAt<span class="token operator">:</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">&quot;</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>pageSize <span class="token operator">*</span> <span class="token punctuation">(</span>page <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">&quot;</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">,</span>
+        endAt<span class="token operator">:</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">&quot;</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>pageSize <span class="token operator">*</span> page <span class="token operator">-</span> <span class="token number">1</span><span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">&quot;</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">,</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      dataType<span class="token operator">:</span> <span class="token string">'json'</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">// parallel GET detail</span>
+    <span class="token keyword">const</span> newsList <span class="token operator">=</span> <span class="token keyword">await</span> Promise<span class="token punctuation">.</span><span class="token function">all</span><span class="token punctuation">(</span>
+      Object<span class="token punctuation">.</span><span class="token function">keys</span><span class="token punctuation">(</span>idList<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token parameter">key</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        <span class="token keyword">const</span> url <span class="token operator">=</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>serverUrl<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">/item/</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>idList<span class="token punctuation">[</span>key<span class="token punctuation">]</span><span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">.json</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span>ctx<span class="token punctuation">.</span><span class="token function">curl</span><span class="token punctuation">(</span>url<span class="token punctuation">,</span> <span class="token punctuation">{</span> dataType<span class="token operator">:</span> <span class="token string">'json'</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> newsList<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token parameter">res</span> <span class="token operator">=&gt;</span> res<span class="token punctuation">.</span>data<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> NewsService<span class="token punctuation">;</span>
+
+</code></pre></div><p><strong>框架提供了内置的 HttpClient 来方便开发者使用 HTTP 请求。</strong></p> <p>然后稍微修改下之前的 Controller：</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">// app/controller/news.js</span>
+<span class="token keyword">const</span> Controller <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'egg'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>Controller<span class="token punctuation">;</span>
+
+<span class="token keyword">class</span> <span class="token class-name">NewsController</span> <span class="token keyword">extends</span> <span class="token class-name">Controller</span> <span class="token punctuation">{</span>
+  <span class="token keyword">async</span> <span class="token function">list</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> ctx <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>ctx<span class="token punctuation">;</span>
+    <span class="token keyword">const</span> page <span class="token operator">=</span> ctx<span class="token punctuation">.</span>query<span class="token punctuation">.</span>page <span class="token operator">||</span> <span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token keyword">const</span> newsList <span class="token operator">=</span> <span class="token keyword">await</span> ctx<span class="token punctuation">.</span>service<span class="token punctuation">.</span>news<span class="token punctuation">.</span><span class="token function">list</span><span class="token punctuation">(</span>page<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">await</span> ctx<span class="token punctuation">.</span><span class="token function">render</span><span class="token punctuation">(</span><span class="token string">'news/list.tpl'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> list<span class="token operator">:</span> newsList <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> NewsController<span class="token punctuation">;</span>
+</code></pre></div><p>还需增加 app/service/news.js 中读取到的配置：</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">// config/config.default.js</span>
+<span class="token comment">// 添加 news 的配置项</span>
+exports<span class="token punctuation">.</span>news <span class="token operator">=</span> <span class="token punctuation">{</span>
+  pageSize<span class="token operator">:</span> <span class="token number">5</span><span class="token punctuation">,</span>
+  serverUrl<span class="token operator">:</span> <span class="token string">'https://hacker-news.firebaseio.com/v0'</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><h3 id="编写扩展"><a href="#编写扩展" class="header-anchor">#</a> 编写扩展</h3> <p>遇到一个小问题，资讯时间的数据是 UnixTime 格式的，我们希望显示为便于阅读的格式。</p> <p>框架提供了一种快速扩展的方式，只需在 app/extend 目录下提供扩展脚本即可，具体参见扩展。</p> <p>在这里，可以使用 View 插件支持的 Helper 来实现：</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token comment">## 安装依赖</span>
+$ <span class="token function">npm</span> i moment --save
+</code></pre></div><div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">// app/extend/helper.js</span>
+<span class="token keyword">const</span> moment <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'moment'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+exports<span class="token punctuation">.</span><span class="token function-variable function">relativeTime</span> <span class="token operator">=</span> <span class="token parameter">time</span> <span class="token operator">=&gt;</span> <span class="token function">moment</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Date</span><span class="token punctuation">(</span>time <span class="token operator">*</span> <span class="token number">1000</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">fromNow</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><p>在模板里面使用：</p> <div class="language-html extra-class"><pre class="language-html"><code><span class="token comment">&lt;!-- app/view/news/list.tpl --&gt;</span>
+{{ helper.relativeTime(item.time) }}
+
+</code></pre></div><h2 id="编写-middleware"><a href="#编写-middleware" class="header-anchor">#</a> 编写 Middleware</h2> <p>假设有个需求：新闻站点禁止百度爬虫访问。</p> <p>聪明的朋友们一定很快能想到可以通过 Middleware 判断 User-Agent，如下：</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">// app/middleware/robot.js</span>
+<span class="token comment">// options === app.config.robot</span>
+module<span class="token punctuation">.</span><span class="token function-variable function">exports</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">options<span class="token punctuation">,</span> app</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token keyword">async</span> <span class="token keyword">function</span> <span class="token function">robotMiddleware</span><span class="token punctuation">(</span><span class="token parameter">ctx<span class="token punctuation">,</span> next</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> source <span class="token operator">=</span> ctx<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token string">'user-agent'</span><span class="token punctuation">)</span> <span class="token operator">||</span> <span class="token string">''</span><span class="token punctuation">;</span>
+    <span class="token keyword">const</span> match <span class="token operator">=</span> options<span class="token punctuation">.</span>ua<span class="token punctuation">.</span><span class="token function">some</span><span class="token punctuation">(</span><span class="token parameter">ua</span> <span class="token operator">=&gt;</span> ua<span class="token punctuation">.</span><span class="token function">test</span><span class="token punctuation">(</span>source<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>match<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 设置禁止访问的http状态码</span>
+      ctx<span class="token punctuation">.</span>status <span class="token operator">=</span> <span class="token number">403</span><span class="token punctuation">;</span>
+      ctx<span class="token punctuation">.</span>message <span class="token operator">=</span> <span class="token string">'Go away, robot.'</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+      <span class="token keyword">await</span> <span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre></div><p>修改配置文件：</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">// config/config.default.js</span>
+<span class="token comment">// add middleware robot</span>
+exports<span class="token punctuation">.</span>middleware <span class="token operator">=</span> <span class="token punctuation">[</span>
+  <span class="token string">'robot'</span>
+<span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token comment">// robot's configurations</span>
+exports<span class="token punctuation">.</span>robot <span class="token operator">=</span> <span class="token punctuation">{</span>
+  ua<span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">Baiduspider</span><span class="token regex-delimiter">/</span><span class="token regex-flags">i</span></span><span class="token punctuation">,</span>
+  <span class="token punctuation">]</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre></div><p>现在可以使用 <code>curl http://localhost:7001/news -A &quot;Baiduspider&quot;</code> 看看效果。</p> <p><strong>其实这里的middleware就是egg框架中一个非常重要的概念——中间件</strong>，就我自己的经验来看，项目中很多特定的授权、校验都可以通过中间件来完成</p> <h2 id="配置文件"><a href="#配置文件" class="header-anchor">#</a> 配置文件</h2> <p>写业务的时候，不可避免的需要有配置文件，框架提供了强大的配置合并管理功能：</p> <p>支持按环境变量加载不同的配置文件，如 config.local.js， config.prod.js 等等。
+应用/插件/框架都可以配置自己的配置文件，框架将按顺序合并加载。
+具体合并逻辑可参见配置文件。</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">// config/config.default.js</span>
+exports<span class="token punctuation">.</span>robot <span class="token operator">=</span> <span class="token punctuation">{</span>
+  ua<span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">curl</span><span class="token regex-delimiter">/</span><span class="token regex-flags">i</span></span><span class="token punctuation">,</span>
+    <span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">Baiduspider</span><span class="token regex-delimiter">/</span><span class="token regex-flags">i</span></span><span class="token punctuation">,</span>
+  <span class="token punctuation">]</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre></div><div class="language-javascript extra-class"><pre class="language-javascript"><code>
+<span class="token comment">// config/config.local.js</span>
+<span class="token comment">// only read at development mode, will override default</span>
+exports<span class="token punctuation">.</span>robot <span class="token operator">=</span> <span class="token punctuation">{</span>
+  ua<span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">Baiduspider</span><span class="token regex-delimiter">/</span><span class="token regex-flags">i</span></span><span class="token punctuation">,</span>
+  <span class="token punctuation">]</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre></div><div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">// app/service/some.js</span>
+<span class="token keyword">const</span> Service <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'egg'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>Service<span class="token punctuation">;</span>
+
+<span class="token keyword">class</span> <span class="token class-name">SomeService</span> <span class="token keyword">extends</span> <span class="token class-name">Service</span> <span class="token punctuation">{</span>
+  <span class="token keyword">async</span> <span class="token function">list</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> rule <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>config<span class="token punctuation">.</span>robot<span class="token punctuation">.</span>ua<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> SomeService<span class="token punctuation">;</span>
+
+</code></pre></div><h2 id="单元测试"><a href="#单元测试" class="header-anchor">#</a> 单元测试</h2> <p>单元测试非常重要，框架也提供了 egg-bin 来帮开发者无痛的编写测试。</p> <p>测试文件应该放在项目根目录下的 test 目录下，并以 test.js 为后缀名，即 {app_root}/test/**/*.test.js。</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">// test/app/middleware/robot.test.js</span>
+<span class="token keyword">const</span> <span class="token punctuation">{</span> app<span class="token punctuation">,</span> mock<span class="token punctuation">,</span> assert <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'egg-mock/bootstrap'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token function">describe</span><span class="token punctuation">(</span><span class="token string">'test/app/middleware/robot.test.js'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token function">it</span><span class="token punctuation">(</span><span class="token string">'should block robot'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> app<span class="token punctuation">.</span><span class="token function">httpRequest</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+      <span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token string">'/'</span><span class="token punctuation">)</span>
+      <span class="token punctuation">.</span><span class="token function">set</span><span class="token punctuation">(</span><span class="token string">'User-Agent'</span><span class="token punctuation">,</span> <span class="token string">&quot;Baiduspider&quot;</span><span class="token punctuation">)</span>
+      <span class="token punctuation">.</span><span class="token function">expect</span><span class="token punctuation">(</span><span class="token number">403</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><p>配置<code>npm scripts</code>命令：</p> <div class="language-json extra-class"><pre class="language-json"><code><span class="token punctuation">{</span>
+  <span class="token property">&quot;scripts&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;test&quot;</span><span class="token operator">:</span> <span class="token string">&quot;egg-bin test&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;cov&quot;</span><span class="token operator">:</span> <span class="token string">&quot;egg-bin cov&quot;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>安装依赖</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token comment">## 下载mock包</span>
+<span class="token function">npm</span> i egg-mock --save-dev
+<span class="token comment">## 执行测试：</span>
+<span class="token function">npm</span> <span class="token builtin class-name">test</span>
+
+</code></pre></div><p>基础的单元测试mock可以通过这样出处理，复杂一点的可能需要去使用postman实际调用，至此，欢迎走进egg框架大门，愿你一帆风顺~</p></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">最近更新:</span> <span class="time">1/19/2021, 11:03:12 PM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev"><a href="/egg-learning/official/introduce.html" class="prev"><i aria-label="icon: left" class="anticon anticon-left"><svg viewBox="64 64 896 896" focusable="false" data-icon="left" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M724 218.3V141c0-6.7-7.7-10.4-12.9-6.3L260.3 486.8a31.86 31.86 0 0 0 0 50.3l450.8 352.1c5.3 4.1 12.9.4 12.9-6.3v-77.3c0-4.9-2.3-9.6-6.1-12.6l-360-281 360-281.1c3.8-3 6.1-7.7 6.1-12.6z"></path></svg></i>
+        简单介绍
+      </a></span> <span class="next"><a href="/egg-learning/official/catalog.html">
+        目录结构
+        <i aria-label="icon: right" class="anticon anticon-right"><svg viewBox="64 64 896 896" focusable="false" data-icon="right" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M765.7 486.8L314.9 134.7A7.97 7.97 0 0 0 302 141v77.3c0 4.9 2.3 9.6 6.1 12.6l360 281.1-360 281.1c-3.9 3-6.1 7.7-6.1 12.6V883c0 6.7 7.7 10.4 12.9 6.3l450.8-352.1a31.96 31.96 0 0 0 0-50.4z"></path></svg></i></a></span></p></div> </main> <!----></div><div class="global-ui"></div></div>
+    <script src="/egg-learning/assets/js/app.832bcef2.js" defer></script><script src="/egg-learning/assets/js/2.37616b7d.js" defer></script><script src="/egg-learning/assets/js/14.211de7bf.js" defer></script>
+  </body>
+</html>
